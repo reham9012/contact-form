@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container rounded">
+      <div class="row mb-5">
+        <div class="col"><h2>Contact Us</h2></div>
+      </div>
+
+      <form class="row g-3" id="contact-form">
+        <div class="row">
+          <div class="col-md-6 fname">
+            <label for="validationServer01" class="form-label"
+              >First name <span>*</span></label
+            >
+            <input
+              type="text"
+              class="form-control fname field"
+              id="fname"
+              value=""
+            />
+            <p class="error d-none">this field is required</p>
+          </div>
+
+          <div class="col-md-6 lname">
+            <label for="validationServer02" class="form-label"
+              >Last name <span>*</span></label
+            >
+            <input
+              type="text"
+              class="form-control lname field"
+              id="validationServer02"
+              value=""
+            />
+            <p class="error d-none">this field is required</p>
+          </div>
+        </div>
+        <div class="row mb-3 mt-3">
+          <div class="col message">
+            <label for="validationServer02" class="form-label"
+              >Email <span>*</span></label
+            >
+            <input
+              type="email"
+              class="form-control email field"
+              name=""
+              id=""
+              aria-describedby="emailHelpId"
+            />
+            <p class="error d-none">Please Enter A Valid Email Address</p>
+          </div>
+        </div>
+
+        <div class="row mb-3 mt-3 radio-inputs">
+          <label for="validationServer02" class="form-label"
+            >Query Type <span>*</span></label
+          >
+          <div
+            class="col radio-btn radio-div border border-success border-opacity-10 rounded p-2 m-2"
+          >
+            <div class="form-check form-check-inline query-type">
+              <input
+                class="form-check-input radio"
+                type="radio"
+                name="inlineRadioOptions "
+                id="inlineRadio1"
+                value="option1"
+              />
+              <p class="error radio-error d-none">please select a query type</p>
+              <label class="form-check-label" for="validationServer02"
+                >General Enquiry
+              </label>
+            </div>
+          </div>
+          <div
+            class="col m-2 radio-div radio-btn border border-success border-opacity-10 rounded p-2"
+          >
+            <div class="form-check form-check-inline query-type">
+              <input
+                class="form-check-input radio"
+                type="radio"
+                name="inlineRadioOptions "
+                id="inlineRadio2"
+                value="option2"
+              />
+
+              <p class="error radio-error d-none">please select a query type</p>
+              <label class="form-check-label" for="validationServer02"
+                >Support Request</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-3 mt-3">
+          <div class="col">
+            <label class="pb-2" for="floatingTextarea"
+              >Message <span>*</span></label
+            >
+            <!-- <div class="form-floating"> -->
+            <textarea
+              class="form-control message field"
+              id="floatingTextarea"
+            ></textarea>
+            <p class="error d-none">this field is required</p>
+          </div>
+        </div>
+
+        <div class="form-check mb-4 mt-4 checkbox radio-div">
+          <input
+            class="consent check"
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+            for="validationServer02"
+          />
+
+          <p class="error d-none check-error">
+            To submit this form, please consent to being contacted
+          </p>
+          <label class="form-check-label" for="flexCheckDefault">
+            I consent to being contacted by the team <span>*</span>
+          </label>
+        </div>
+
+        <div class="row mb-3 mt-3">
+          <div class="col d-grid gap-2">
+            <button class="submit-btn btn btn-success" type="submit">
+              Submit
+            </button>
+          </div>
+        </div>
+
+        <!-- <div class="col-12">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div> -->
+      </form>
+    </div>
+
+    <div class="row success-message rounded d-none">
+      <div class="col">
+        <h4>Message Sent!</h4>
+        <span> Thanks for completing the form. We'll be in touch soon!</span>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by
+      <a href="https://www.frontendmentor.io/profile/reham9012">reham</a>.
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

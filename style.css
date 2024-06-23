@@ -1,0 +1,121 @@
+body{
+    background-color: hsl(148, 38%, 91%);
+}
+
+
+
+.container{
+    background-color: white;
+    margin: 100px auto;
+    padding: 50px 50px;
+    position: relative;
+}
+.form-control:focus{
+    border-color:hsl(169, 82%, 27%) ;
+    box-shadow: none;
+    border-color: 0;
+}
+.form-check-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-check-input::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: hsl(169, 82%, 27%);
+    display: none;
+}
+
+.form-check-input:checked{
+    background-color: white ;
+    border-color: hsl(169, 82%, 27%);
+}
+.check:checked{
+  
+    border-color: hsl(169, 82%, 27%);
+}
+.form-check-input:checked::before{
+    display: block;
+}
+
+.form-check-input:focus{
+    box-shadow: none;
+}
+.success-message{
+    position:fixed;
+    z-index: 4;
+    border: 1px solid black;
+    color: white;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* margin-left: 500px;
+    margin-top: 50px; */
+  padding: 10px;
+  pointer-events: none;
+  /* opacity: 0; */
+    background-color: hsl(187, 24%, 22%);
+}
+
+.success-message {
+    
+    pointer-events: all;
+    animation-name: fadeOute;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+ .valid   span{
+    color: hsl(186, 15%, 59%);
+}
+.form-label span{
+    color: hsl(169, 82%, 27%);
+}
+.attribution{
+    text-align: center;
+}
+.error{
+     /* display: none;  */
+    color: red;
+    margin-top: 10px;
+}
+.form-alert.form-error{
+    display: block;
+}
+
+
+
+.radio-btn:active{
+    background-color:hsl(148, 38%, 91%);
+}
+.consent{
+    accent-color: hsl(169, 82%, 27%);
+}
+@keyframes fadeOute{
+0%,25%,50%,75%{
+    opacity: 1;
+}
+100%{
+    opacity: 0;
+}
+}
+.hide{
+    display: none;
+}
+.radio-div {
+    position: relative;
+}
+
+.radio-div .radio-error {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+}
+
+.radio-div .check-error {
+    position: absolute;
+    bottom: -45px;
+    left: 20px;
+}
